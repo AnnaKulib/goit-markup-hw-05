@@ -76,7 +76,9 @@
       <section class="section-hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button" type="button">Заказать услугу</button>
+          <button class="button" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!-- Преимущества -->
@@ -544,22 +546,20 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <button data-open-modal>Открыть модальное окно</button>
     <div class="backdrop is-hidden" data-backdrop>
       <div class="modal">
-        <button class="modal-close" data-close-modal>
+        <button class="modal-close" data-modal-close>
           <svg class="modal-close-icon" width="18" height="18">
             <use href="./images/sprite-icons.svg#icon-close-black"></use>
           </svg>
         </button>
       </div>
     </div>
-
-    <!-- Script -->
-    <script>
+    <script src="./js/modal.js"></script>
+    <!-- <script>
       const refs = {
-        openModalBtn: document.querySelector('[data-open-modal]'),
-        closeModalBtn: document.querySelector('[data-close-modal]'),
+        openModalBtn: document.querySelector('[data-modal-open]'),
+        closeModalBtn: document.querySelector('[data-modal-close]'),
         backdrop: document.querySelector('[data-backdrop]'),
       };
 
@@ -575,6 +575,6 @@
       function logBackdropClick() {
         console.log('Это клик в бекдроп');
       }
-    </script>
+    </script> -->
   </body>
 </html>
